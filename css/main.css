@@ -1,0 +1,88 @@
+/*//////////////////////LAYOUT STYLES*/
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#main-header {
+	margin: 20px auto;
+	max-width: 350px;
+}
+
+/*///////////////////SEARCHBAR STYLES*/
+
+input {
+	font-family: 'Ubuntu', sanserif;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 2px #eee;
+	border: 0;
+	border-radius: 5px;
+	transition: box-shadow .5s ease;
+}
+
+input:focus {
+	box-shadow: 0 0 0 2px #ddd;
+}
+
+input::-webkit-input-placeholder {
+	transition: color .2s ease;
+}
+
+input::-moz-input-placeholder {
+	transition: color .2s ease;
+}
+
+input::-ms-input-placeholder {
+	transition: color .2s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: white;
+}
+
+input:focus::-moz-input-placeholder {
+	color: white;
+}
+
+input:focus::-ms-input-placeholder {
+	color: white;
+}
+
+/*///////////////////GALLERY STYLES*/
+
+#gallery img{
+	padding: 0;
+	width: 100%;
+	display: block;
+	margin:0 auto;
+	max-width: 500px;
+}
+
+
+/*////////////////////////MEDIA Q's*/
+
+@media screen and (min-width:768px) {
+	#main-header {
+		margin: 20px auto;
+		width: 50%;
+	}
+
+	#gallery {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	
+	#gallery img {
+		padding: 20px;
+		display: inline;
+		width: initial;
+	}
+	
+}
