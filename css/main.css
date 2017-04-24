@@ -1,4 +1,4 @@
-/*//////////////////////LAYOUT STYLES*/
+/*/////////////////////////////LAYOUT*/
 
 .container{
 	width: 100%;
@@ -10,7 +10,7 @@
 	max-width: 350px;
 }
 
-/*///////////////////SEARCHBAR STYLES*/
+/*///////////////////////////SEARCHBAR*/
 
 input {
 	font-family: 'Ubuntu', sanserif;
@@ -51,15 +51,24 @@ input:focus::-ms-input-placeholder {
 	color: white;
 }
 
-/*///////////////////GALLERY STYLES*/
+/*/////////////////////////GALLERY*/
 
-#gallery img{
-	padding: 0;
+#gallery {
 	width: 100%;
-	display: block;
 	margin:0 auto;
-	max-width: 500px;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
 }
+
+#gallery a{
+	padding: 0;
+	max-width: initial;
+	height: 200px;
+}
+
+/*/////////////////////////LIGHTBOX*/
 
 
 /*////////////////////////MEDIA Q's*/
@@ -71,18 +80,17 @@ input:focus::-ms-input-placeholder {
 	}
 
 	#gallery {
+		max-width: 1000px;
 		width: 100%;
 		margin: 0 auto;
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
 	}
 	
-	#gallery img {
+	#gallery a {
 		padding: 20px;
 		display: inline;
 		width: initial;
+		height: initial;
 	}
 	
 }
