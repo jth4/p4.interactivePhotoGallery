@@ -12,7 +12,7 @@ function letsGo(){
 	let photo = document.querySelectorAll('img');
 	console.log(photo);
 	
-	for ( i=0; i < gallery.length; i++ ) {
+	for ( var i=0; i < gallery.length; i++ ) {
 		
 		let photoCaption = gallery[i].getAttribute('data-title').toLowerCase();
 		console.log(photoCaption);
@@ -21,6 +21,6 @@ function letsGo(){
 			gallery[i].style.display = "";
 		} else {
 			gallery[i].style.display = "none";
-		};
-	};
-};
+		}
+	}
+}
