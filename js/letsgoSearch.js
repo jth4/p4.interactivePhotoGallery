@@ -1,20 +1,26 @@
-//LETS GO! Search by jth4 2017
+function letsGo(){
 
-/*////////////////////////////////////////MAIN IDEA//
-if input text contains any word in a picture's caption,
-display only those pictures and remove the others;
-reset images if user changes text */
-
-var $input = $('input').val().toUpperCase();
-var $cap = $('data-title').val().toUpperCase();
-var $img = $('img');
-
-if( $cap *= $input ) {
-	$(this).hide();
-
-//	$(this).show(); 
-//	} else {
-//	$(this).hide();
+	let searchbar = document.getElementById('search');
+	console.log(searchbar);
+	
+	let userInput = searchbar.value.toLowerCase();
+	console.log(userInput);
+	
+	let gallery = document.querySelectorAll('#gallery a');
+	console.log(gallery);
+	
+	let photo = document.querySelectorAll('img');
+	console.log(photo);
+	
+	for ( i=0; i < gallery.length; i++ ) {
+		
+		let photoCaption = gallery[i].getAttribute('data-title').toLowerCase();
+		console.log(photoCaption);
+		
+		if (photoCaption.indexOf(userInput) > -1) {
+			gallery[i].style.display = "";
+		} else {
+			gallery[i].style.display = "none";
+		};
+	};
 };
-
-$('data-title').not($input.val()).hide();
